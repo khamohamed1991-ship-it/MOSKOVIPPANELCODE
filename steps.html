@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Get Your Free Key | MOSKO CHEATS</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#000;font-family:Arial,Helvetica,sans-serif}
+body{min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;color:#fff;position:relative}
+#particles{position:fixed;inset:0;width:100%;height:100%;pointer-events:none}
+.glow{position:fixed;width:420px;height:420px;border-radius:50%;background:rgba(0,110,255,.09);box-shadow:0 0 100px rgba(0,130,255,.13);animation:g 6s ease-in-out infinite}
+@keyframes g{0%,100%{transform:scale(.9);opacity:.6}50%{transform:scale(1.1);opacity:1}}
+.main{position:relative;z-index:2;width:min(450px,90vw);text-align:center;padding:22px 0}
+.logo{width:min(185px,45vw);height:min(185px,45vw);object-fit:cover;border-radius:50%;display:block;margin:0 auto 20px;border:2px solid #159cff;box-shadow:0 0 15px #008cff,0 0 45px rgba(0,130,255,.55);animation:li .9s ease-out,lg 3s ease-in-out 1s infinite}
+@keyframes li{from{opacity:0;transform:scale(.65);filter:blur(7px)}to{opacity:1;transform:scale(1);filter:none}}
+@keyframes lg{0%,100%{box-shadow:0 0 15px #008cff,0 0 40px rgba(0,130,255,.5)}50%{box-shadow:0 0 22px #00aaff,0 0 58px rgba(0,140,255,.72)}}
+.title{margin:0 0 22px;color:#55baff;font-size:clamp(22px,5.8vw,34px);font-weight:900;letter-spacing:1px;text-shadow:0 0 9px #008cff,0 0 25px rgba(0,130,255,.8);animation:tg 3s ease-in-out infinite}
+@keyframes tg{0%,100%{filter:brightness(1)}50%{filter:brightness(1.28)}}
+.card{position:relative;padding:26px;border:1px solid rgba(20,160,255,.65);border-radius:25px;background:rgba(5,12,21,.94);box-shadow:0 0 25px rgba(0,130,255,.25),0 20px 55px rgba(0,0,0,.75),inset 0 0 25px rgba(0,130,255,.07);animation:ci .8s ease-out;overflow:hidden}
+@keyframes ci{from{opacity:0;transform:translateY(25px) scale(.94)}to{opacity:1;transform:none}}
+.card:before{content:"";position:absolute;top:0;left:-70px;width:65px;height:2px;background:#24a9ff;box-shadow:0 0 9px #008cff;animation:bl 3.5s linear infinite}
+@keyframes bl{0%{left:-70px;top:0}25%{left:100%;top:0}50%{left:calc(100% - 2px);top:100%}75%{left:-65px;top:calc(100% - 2px)}100%{left:-70px;top:0}}
+.instructions{color:#c7e7ff;font-size:15px;line-height:1.75;margin:0 0 20px}.instructions strong{color:#55baff}
+.task-box{text-align:left;padding:15px 17px;border-radius:15px;background:#03090f;border:1px solid rgba(20,160,255,.5);box-shadow:inset 0 0 20px rgba(0,130,255,.08);margin-bottom:18px}
+.task-box div{margin:7px 0;color:#b8ddff;font-size:14px}.task-box span{color:#55baff;font-weight:900}
+.complete{display:block;width:100%;padding:15px;border:1px solid #159cff;border-radius:15px;background:linear-gradient(135deg,#087fd8,#0455aa);color:#fff;font-size:16px;font-weight:900;text-decoration:none;box-shadow:0 0 18px rgba(0,130,255,.3);transition:.2s}
+.complete:hover{transform:translateY(-3px);box-shadow:0 0 30px rgba(0,145,255,.6)}.complete:active{transform:scale(.97)}
+.note{margin:14px 0 0;color:#7194ad;font-size:12px}
+@media(max-width:500px){.main{width:88vw}.logo{width:145px;height:145px;margin-bottom:16px}.title{font-size:21px;margin-bottom:18px}.card{padding:21px}}
+</style>
+</head>
+<body>
+<canvas id="particles"></canvas><div class="glow"></div>
+<main class="main">
+<img class="logo" src="logo.png" alt="MOSKO CHEATS">
+<h1 class="title">Get Your Free Key | MOSKO CHEATS</h1>
+<section class="card">
+<p class="instructions"><strong>How to continue:</strong><br>Complete the required tasks on the next page. Follow the instructions shown there and wait for the process to finish.</p>
+<div class="task-box">
+<div>🔹 <span>Step 1:</span> Open the task page.</div>
+<div>🔹 <span>Step 2:</span> Complete the tasks shown there.</div>
+<div>🔹 <span>Step 3:</span> Return and continue to get your key.</div>
+</div>
+<a class="complete" href="https://short-jambo.ink/vmKs" target="_blank" rel="noopener noreferrer">➡️ Complete the tasks</a>
+<p class="note">Complete only the tasks requested by the page and avoid entering sensitive information.</p>
+</section>
+</main>
+<script>
+const c=document.getElementById("particles"),x=c.getContext("2d");let w,h,p=[];const n=65;
+function r(){w=innerWidth;h=innerHeight;const d=Math.min(devicePixelRatio||1,2);c.width=w*d;c.height=h*d;c.style.width=w+"px";c.style.height=h+"px";x.setTransform(d,0,0,d,0,0)}
+function m(y){return{x:Math.random()*w,y:y?Math.random()*h:-10,s:Math.random()*2.2+.5,v:Math.random()*2+.7,o:Math.random()*.65+.2,d:(Math.random()-.5)*.35}}
+function i(){p=[];for(let j=0;j<n;j++)p.push(m(1))}
+function a(){x.clearRect(0,0,w,h);for(const q of p){q.y+=q.v;q.x+=q.d;if(q.y>h+10)Object.assign(q,m(0));x.beginPath();x.arc(q.x,q.y,q.s,0,Math.PI*2);x.fillStyle="rgba(35,165,255,"+q.o+")";x.shadowBlur=6;x.shadowColor="#008cff";x.fill()}requestAnimationFrame(a)}
+addEventListener("resize",()=>{r();i()});r();i();a();
+</script>
+</body>
+</html>
