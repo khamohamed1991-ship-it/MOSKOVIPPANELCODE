@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Your Free Key | MOSKO CHEATS</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;min-height:100%;background:#000;font-family:Arial,Helvetica,sans-serif}
+body{min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;color:#fff;position:relative}
+#particles{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.bg-glow{position:fixed;width:420px;height:420px;border-radius:50%;background:rgba(0,110,255,.10);box-shadow:0 0 100px rgba(0,130,255,.13);animation:glow 6s ease-in-out infinite;pointer-events:none}
+@keyframes glow{0%,100%{transform:scale(.9);opacity:.65}50%{transform:scale(1.1);opacity:1}}
+.main{width:min(440px,90vw);text-align:center;position:relative;z-index:2;padding:25px 0}
+.logo{width:min(190px,45vw);height:min(190px,45vw);object-fit:cover;border-radius:50%;display:block;margin:0 auto 22px;border:2px solid rgba(35,170,255,.75);box-shadow:0 0 12px #008cff,0 0 35px rgba(0,130,255,.55);animation:logoIn .9s ease-out,logoGlow 3s ease-in-out 1s infinite}
+@keyframes logoIn{from{opacity:0;transform:scale(.65) rotate(-8deg);filter:blur(8px)}to{opacity:1;transform:scale(1) rotate(0);filter:none}}
+@keyframes logoGlow{0%,100%{box-shadow:0 0 12px #008cff,0 0 35px rgba(0,130,255,.5)}50%{box-shadow:0 0 20px #00aaff,0 0 55px rgba(0,140,255,.75)}}
+.title{margin:0 0 25px;color:#52baff;font-size:clamp(21px,5vw,36px);font-weight:900;letter-spacing:2px;text-shadow:0 0 8px #008cff,0 0 24px rgba(0,130,255,.8);animation:titleGlow 3s ease-in-out infinite}
+@keyframes titleGlow{0%,100%{filter:brightness(1)}50%{filter:brightness(1.3)}}
+.card{position:relative;padding:28px;border-radius:25px;border:1px solid rgba(20,160,255,.65);background:rgba(5,12,21,.93);box-shadow:0 0 24px rgba(0,130,255,.25),0 20px 55px rgba(0,0,0,.75),inset 0 0 25px rgba(0,130,255,.07);animation:cardIn .8s ease-out;overflow:hidden}
+@keyframes cardIn{from{opacity:0;transform:translateY(30px) scale(.93)}to{opacity:1;transform:none}}
+.card:before{content:"";position:absolute;top:0;left:-80px;width:65px;height:2px;background:#24a9ff;box-shadow:0 0 9px #008cff;animation:borderLight 3.5s linear infinite}
+@keyframes borderLight{0%{left:-80px;top:0}25%{left:100%;top:0}50%{left:calc(100% - 2px);top:100%}75%{left:-65px;top:calc(100% - 2px)}100%{left:-80px;top:0}}
+.code{padding:18px;border-radius:15px;background:#03090f;border:1px solid rgba(20,160,255,.6);color:#55baff;font-size:23px;font-weight:900;letter-spacing:1px;box-shadow:inset 0 0 25px rgba(0,130,255,.12)}
+.copy{width:100%;margin-top:17px;padding:15px;border:1px solid #159cff;border-radius:15px;background:linear-gradient(135deg,#087fd8,#0455aa);color:#fff;font-size:16px;font-weight:900;cursor:pointer;box-shadow:0 0 18px rgba(0,130,255,.3);transition:.2s}
+.copy:hover{transform:translateY(-3px);box-shadow:0 0 28px rgba(0,145,255,.55)}
+.copy:active{transform:scale(.97)}
+.status{height:22px;margin-top:11px;color:#35ff72;font-size:14px;font-weight:900;opacity:0;transition:.25s}
+.status.show{opacity:1}
+.success .code{border-color:#35ff72;box-shadow:0 0 20px rgba(45,255,110,.25)}
+.success .copy{background:#087c3d;border-color:#35ff72}
+@media(max-width:500px){.main{width:88vw}.logo{width:145px;height:145px;margin-bottom:17px}.title{font-size:20px;letter-spacing:1px;margin-bottom:20px}.card{padding:22px}}
+</style>
+</head>
+<body>
+<canvas id="particles"></canvas>
+<div class="bg-glow"></div>
+<main class="main">
+<img class="logo" src="logo.png" alt="MOSKO">
+<h1 class="title">Your Free Key | MOSKO CHEATS</h1>
+<section class="card" id="card">
+<div class="code" id="code">MOSKO-DEV-LSGI-ISFK-91VD-PABC</div>
+<button class="copy" id="copy">Copy Code</button>
+<div class="status" id="status">Copy secces</div>
+</section>
+</main>
+<script>
+const canvas=document.getElementById("particles"),ctx=canvas.getContext("2d");
+let W=0,H=0,particles=[];
+const COUNT=65;
+function resize(){W=innerWidth;H=innerHeight;const dpr=Math.min(devicePixelRatio||1,2);canvas.width=W*dpr;canvas.height=H*dpr;canvas.style.width=W+"px";canvas.style.height=H+"px";ctx.setTransform(dpr,0,0,dpr,0,0)}
+function makeParticle(randomY){return{x:Math.random()*W,y:randomY?Math.random()*H:-10,size:Math.random()*2.2+.5,speed:Math.random()*2+.7,opacity:Math.random()*.65+.2,drift:(Math.random()-.5)*.35}}
+function init(){particles=[];for(let i=0;i<COUNT;i++)particles.push(makeParticle(true))}
+function animate(){ctx.clearRect(0,0,W,H);for(const p of particles){p.y+=p.speed;p.x+=p.drift;if(p.y>H+10)Object.assign(p,makeParticle(false));ctx.beginPath();ctx.arc(p.x,p.y,p.size,0,Math.PI*2);ctx.fillStyle="rgba(35,165,255,"+p.opacity+")";ctx.shadowBlur=6;ctx.shadowColor="#008cff";ctx.fill()}requestAnimationFrame(animate)}
+document.getElementById("copy").addEventListener("click",async()=>{const value=document.getElementById("code").textContent.trim(),card=document.getElementById("card"),status=document.getElementById("status");try{await navigator.clipboard.writeText(value)}catch(e){const t=document.createElement("textarea");t.value=value;t.style.position="fixed";t.style.opacity="0";document.body.appendChild(t);t.select();document.execCommand("copy");t.remove()}card.classList.add("success");status.classList.add("show");setTimeout(()=>{card.classList.remove("success");status.classList.remove("show")},1800)});
+window.addEventListener("resize",()=>{resize();init()});resize();init();animate();
+</script>
+</body>
+</html>
